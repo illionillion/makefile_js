@@ -16,6 +16,9 @@ function make_file(){
 
 }
 
+const call = function (func){func();}
+
 window.onload=function(){
-  document.querySelector('#make_btn').addEventListener('click',function(){make_file();});
+  // document.querySelector('#make_btn').addEventListener('click',function(){make_file();});
+  document.querySelector('#make_btn').addEventListener('click',function(){call(make_file);});//同じことしてる
 }
